@@ -33,7 +33,7 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Build with Next.js
         run: pnpm next build
-      - name: Bypass Jekyll processing # <--- NEW STEP ADDED HERE
+      - name: Bypass Jekyll processing
         run: touch ./out/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
