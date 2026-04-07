@@ -2,22 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Architype Stedelijk";
-  src: url("/fonts/Architype-Stedelijk.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "VayuSans";
-  src: url("/fonts/VayuSans-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -66,9 +50,11 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     scroll-behavior: smooth;
   }
@@ -76,93 +62,116 @@
 
 /* Floating drift animations for background decorations */
 @keyframes drift-1 {
+
   0%,
   100% {
     transform: translate(0, 0) rotate(0deg);
   }
+
   25% {
     transform: translate(12px, -18px) rotate(2deg);
   }
+
   50% {
     transform: translate(-8px, -30px) rotate(-1deg);
   }
+
   75% {
     transform: translate(15px, -10px) rotate(3deg);
   }
 }
 
 @keyframes drift-2 {
+
   0%,
   100% {
     transform: translate(0, 0) rotate(0deg);
   }
+
   25% {
     transform: translate(-15px, 10px) rotate(-2deg);
   }
+
   50% {
     transform: translate(10px, 25px) rotate(1deg);
   }
+
   75% {
     transform: translate(-20px, 8px) rotate(-3deg);
   }
 }
 
 @keyframes drift-3 {
+
   0%,
   100% {
     transform: translate(0, 0);
   }
+
   20% {
     transform: translate(20px, -12px);
   }
+
   40% {
     transform: translate(8px, -28px);
   }
+
   60% {
     transform: translate(-14px, -16px);
   }
+
   80% {
     transform: translate(-6px, 8px);
   }
 }
 
 @keyframes drift-4 {
+
   0%,
   100% {
     transform: translate(0, 0) rotate(0deg);
   }
+
   33% {
     transform: translate(-10px, -20px) rotate(-4deg);
   }
+
   66% {
     transform: translate(18px, -8px) rotate(2deg);
   }
 }
 
 @keyframes drift-5 {
+
   0%,
   100% {
     transform: translate(0, 0) rotate(0deg);
   }
+
   25% {
     transform: translate(8px, 15px) rotate(3deg);
   }
+
   50% {
     transform: translate(-12px, 28px) rotate(-2deg);
   }
+
   75% {
     transform: translate(-18px, 10px) rotate(1deg);
   }
 }
 
 @keyframes drift-6 {
+
   0%,
   100% {
     transform: translate(0, 0);
   }
+
   30% {
     transform: translate(-16px, -22px);
   }
+
   60% {
     transform: translate(14px, -14px);
   }
@@ -171,37 +180,46 @@
 .animate-drift-1 {
   animation: drift-1 infinite ease-in-out;
 }
+
 .animate-drift-2 {
   animation: drift-2 infinite ease-in-out;
 }
+
 .animate-drift-3 {
   animation: drift-3 infinite ease-in-out;
 }
+
 .animate-drift-4 {
   animation: drift-4 infinite ease-in-out;
 }
+
 .animate-drift-5 {
   animation: drift-5 infinite ease-in-out;
 }
+
 .animate-drift-6 {
   animation: drift-6 infinite ease-in-out;
 }
 
 /* Blob morph and drift animations — wide movement */
 @keyframes blob-drift-1 {
+
   0%,
   100% {
     transform: translate(0, 0) scale(1) rotate(0deg);
     border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
   }
+
   25% {
     transform: translate(80px, -100px) scale(1.1) rotate(20deg);
     border-radius: 60% 40% 30% 70% / 40% 60% 40% 60%;
   }
+
   50% {
     transform: translate(-60px, -140px) scale(0.9) rotate(-15deg);
     border-radius: 30% 70% 50% 50% / 50% 40% 60% 50%;
   }
+
   75% {
     transform: translate(100px, -50px) scale(1.15) rotate(10deg);
     border-radius: 50% 50% 40% 60% / 60% 50% 50% 40%;
@@ -209,23 +227,28 @@
 }
 
 @keyframes blob-drift-2 {
+
   0%,
   100% {
     transform: translate(0, 0) scale(1) rotate(0deg);
     border-radius: 50% 50% 40% 60% / 40% 60% 40% 60%;
   }
+
   20% {
     transform: translate(-70px, 90px) scale(1.15) rotate(-18deg);
     border-radius: 40% 60% 60% 40% / 50% 40% 60% 50%;
   }
+
   40% {
     transform: translate(50px, 130px) scale(0.85) rotate(8deg);
     border-radius: 60% 40% 50% 50% / 60% 50% 50% 40%;
   }
+
   60% {
     transform: translate(-90px, 60px) scale(1.1) rotate(-12deg);
     border-radius: 35% 65% 45% 55% / 55% 35% 65% 45%;
   }
+
   80% {
     transform: translate(30px, -40px) scale(0.9) rotate(14deg);
     border-radius: 55% 45% 60% 40% / 40% 60% 35% 65%;
@@ -233,15 +256,18 @@
 }
 
 @keyframes blob-drift-3 {
+
   0%,
   100% {
     transform: translate(0, 0) scale(1) rotate(0deg);
     border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
   }
+
   33% {
     transform: translate(70px, -110px) scale(1.2) rotate(25deg);
     border-radius: 40% 60% 40% 60% / 60% 40% 60% 40%;
   }
+
   66% {
     transform: translate(-80px, -40px) scale(0.8) rotate(-20deg);
     border-radius: 50% 50% 60% 40% / 40% 50% 50% 60%;
@@ -251,9 +277,11 @@
 .animate-blob-1 {
   animation: blob-drift-1 22s infinite ease-in-out;
 }
+
 .animate-blob-2 {
   animation: blob-drift-2 28s infinite ease-in-out;
 }
+
 .animate-blob-3 {
   animation: blob-drift-3 19s infinite ease-in-out;
 }
@@ -263,6 +291,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -273,6 +302,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .animate-drift-1,
   .animate-drift-2,
   .animate-drift-3,
