@@ -63,9 +63,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['"VayuSans"', 'system-ui', 'sans-serif'],
-        display: ['"Architype Stedelijk"', 'system-ui', 'sans-serif'],
-        mono: ['"Architype Stedelijk"', 'monospace'],
+        sans: ['var(--font-vayusans)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-architype)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-architype)', 'monospace'],
       },
       borderRadius: {
         lg: 'var(--radius)',
