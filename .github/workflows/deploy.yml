@@ -36,12 +36,12 @@ jobs:
         run: pnpm next build
 
       - name: Bypass Jekyll processing
-        run: touch ./out/deti-plus-26/.nojekyll
-
+        run: touch ./out/.nojekyll
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out/deti-plus-26
+          path: ./out
 
   deploy:
     environment:
