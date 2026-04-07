@@ -37,6 +37,9 @@ jobs:
 
       - name: Bypass Jekyll processing
         run: touch ./out/.nojekyll
+
+      - name: Sanity Check - List exported files
+        run: ls -la ./out
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
