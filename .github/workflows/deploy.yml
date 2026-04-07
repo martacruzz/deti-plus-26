@@ -31,14 +31,17 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
       - name: Build with Next.js
         run: pnpm next build
+
       - name: Bypass Jekyll processing
-        run: touch ./out/.nojekyll
+        run: touch ./out/deti-plus-26/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./out/deti-plus-26
 
   deploy:
     environment:
